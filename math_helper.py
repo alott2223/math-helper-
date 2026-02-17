@@ -4,9 +4,7 @@ Math Helper - A tool that searches web resources and helps teach math concepts
 """
 
 import re
-import urllib.request
 import urllib.parse
-import json
 from typing import Dict, List, Optional, Any
 
 
