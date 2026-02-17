@@ -7,7 +7,7 @@ import re
 import urllib.request
 import urllib.parse
 import json
-from typing import Dict, List, Optional
+from typing import Dict, List, Optional, Any
 
 
 class MathHelper:
@@ -20,7 +20,7 @@ class MathHelper:
             'mathway': 'https://www.mathway.com/Algebra',
         }
     
-    def parse_math_problem(self, problem: str) -> Dict[str, any]:
+    def parse_math_problem(self, problem: str) -> Dict[str, Any]:
         """Parse a math problem to identify type and components"""
         problem = problem.strip()
         
@@ -169,7 +169,7 @@ class MathHelper:
         
         return resources
     
-    def help_with_problem(self, problem: str) -> Dict[str, any]:
+    def help_with_problem(self, problem: str) -> Dict[str, Any]:
         """Main method to help with a math problem"""
         parsed = self.parse_math_problem(problem)
         
@@ -183,7 +183,7 @@ class MathHelper:
         
         return result
     
-    def display_help(self, help_data: Dict[str, any]) -> None:
+    def display_help(self, help_data: Dict[str, Any]) -> None:
         """Display help information in a formatted way"""
         print("\n" + "="*70)
         print("MATH HELPER - Teaching You Step by Step")
